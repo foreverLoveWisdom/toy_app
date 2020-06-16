@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  First post's body: <%= @user.microposts.first.content %>
+  First post's body: <%= @user.microposts.try(:first).content %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
